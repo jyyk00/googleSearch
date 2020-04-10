@@ -8,3 +8,4 @@ function RemoveBookBtn(props) {
       </Button>
     );
   }
+  export default RemoveBookBtn;
