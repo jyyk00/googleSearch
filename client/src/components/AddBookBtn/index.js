@@ -19,3 +19,17 @@ class AddBookBtn extends React.Component{
         .then( () => toast.success(`You added ${book.title} to your bookshelf`))
         .catch(err => console.log(err))
       }
+      render() {
+        return (
+          <div>
+          <Button type="primary" onClick={() => 
+            {this.postToDB(this.props)}
+            }>
+            Save Book
+        </Button>
+        </div>
+        );
+    }
+  }
+
+  export default AddBookBtn;
