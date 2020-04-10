@@ -15,4 +15,22 @@ class Saved extends Component {
     componentDidMount() {
       this.getBooks();
     }
-  
+    getBooks = () => {
+        axios.get("/api/books")
+          .then(res => {
+            this.setState({ savedBooks: res.data })
+          })
+          .catch((err => console.log(err)))
+      }
+    
+      deleteFromDB = id => {
+        console.log(id);
+    
+        axios.delete(`/api/books/${id}`)
+          .then( () => {
+            toast.error('Book Deleted');
+            this.getBooks();
+            
+          })
+          .catch(err => console.log(err))
+      }
