@@ -5,5 +5,9 @@ div.jumbotron {
     }
     
     .white{
-        color:floralwhite;
+        color:black;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: #B03938;
+        padding-left: 15px;
+        padding-right: 15px;
     }
